@@ -1,0 +1,17 @@
+Recursive backtracking algorithm which uses depth-first search on search trees to solve any Sudoku
+and ChessSudoku puzzle efficiently. ChessSudoku is simply classic sudoku puzzle with some additional rules:
+• Knight Rule: a digit must not appear a chess knight’s move away from itself. Knights in chess
+move forming an L shape: either two squares vertically and one horizontally, or two squares
+horizontally and one square vertically.
+• King Rule: a digit must not be a King’s move away from itself. Which to the classical rules
+of Sudoku only adds the fact that a digit cannot be a single diagonal move away from itself.
+• Queen Rule: every 9 in the grid acts like a chess Queen and must not be in the same row/-
+column/3x3 box or diagonal of any other 9.
+
+Backtracking is an approach that consists in building a set of solutions incrementally. The idea is to use 
+recursion to build a solution step by step. In the usual scenario, we have different options at each step and we
+simply make a decision. As soon as the algorithm realizes that the step taken led to a set of solutions
+that would be invalid (i.e. they won’t satisfy the constraints of the problem), then it backtracks,
+effectively eliminating all solutions that could be obtained by taking that last step. 
+
+This algorithm is able to solve difficult 5x5 puzzles in less than 30 seconds!
